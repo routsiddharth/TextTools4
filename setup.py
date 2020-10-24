@@ -3,19 +3,18 @@ from distutils.core import setup
 setup(
   name = 'TextTools4',
   packages = ['TextTools4'],
-  version = '0.2.0',
+  version = '0.2.1',
   license='MIT',        # Chose a license from here: https://help.github.com/articles/licensing-a-repository
   description = 'A package to provide data and use tools on a text.',   # Give a short description about your library
   author = 'Siddharth Rout',                   # Type in your name
   author_email = 'routsiddharth2911@gmail.com',      # Type in your E-Mail
   url = 'https://github.com/routsiddharth/TextTools4',   # Provide either the link to your github or to your website
-  download_url = 'https://github.com/routsiddharth/TextTools4/archive/v0.2.0.tar.gz',
+  download_url = 'https://github.com/routsiddharth/TextTools4/archive/v0.2.1.tar.gz',
   keywords = ['DATA', 'ANALYSIS', 'TEXT', 'WORDS', 'CHART', 'GRAPH', 'TOOLS'],   # Keywords that define your package best
   install_requires=[            # I get to this in a second
           'docx',
           'matplotlib',
-          'PyPDF4',
-          're'
+          'PyPDF4'
       ],
   classifiers=[
     'Development Status :: 3 - Alpha',      # Chose either "3 - Alpha", "4 - Beta" or "5 - Production/Stable" as the current state of your package
