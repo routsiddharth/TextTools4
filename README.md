@@ -2,7 +2,7 @@
 
 TextTools4 is a library that gives you the all the details on your provided text.
 
-Alpha Release v0.1
+Alpha Release v0.1.2
 
 ## Installing and Importing TextTools4
 
