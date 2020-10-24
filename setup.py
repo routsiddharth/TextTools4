@@ -1,4 +1,8 @@
 from distutils.core import setup
+
+with open("README.md", "r") as fh:
+    long_description = fh.read()
+
 setup(
   name = 'TextTools4',
   packages = ['TextTools4'],
@@ -8,7 +12,7 @@ setup(
   author = 'Siddharth Rout',                   # Type in your name
   author_email = 'routsiddharth2911@gmail.com',      # Type in your E-Mail
   url = 'https://github.com/routsiddharth/TextTools4',   # Provide either the link to your github or to your website
-  download_url = 'https://github.com/routsiddharth/TextTools4/archive/v0.1.tar.gz',    # I explain this later on
+  download_url = 'https://github.com/routsiddharth/TextTools4/archive/v0.1.1.tar.gz',    # I explain this later on
   keywords = ['DATA', 'ANALYSIS', 'TEXT', 'WORDS', 'CHART', 'GRAPH', 'TOOLS'],   # Keywords that define your package best
   install_requires=[            # I get to this in a second
           'docx',
@@ -17,6 +21,8 @@ setup(
           'random',
           're'
       ],
+  long_description=long_description,
+  long_description_content_type="text/markdown",
   classifiers=[
     'Development Status :: 3 - Alpha',      # Chose either "3 - Alpha", "4 - Beta" or "5 - Production/Stable" as the current state of your package
     'Intended Audience :: Other Audience',      # Define that your audience are developers
