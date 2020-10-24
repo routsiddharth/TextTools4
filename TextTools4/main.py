@@ -3,7 +3,6 @@ import matplotlib.pyplot as plt
 import PyPDF4
 import random
 import re
-import sys
 
 class GetText:
     def get_pdf(filepath=None):
