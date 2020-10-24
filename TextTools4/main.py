@@ -61,7 +61,7 @@ class GetText:
 
 class Chart:
     
-    def create(src=None, top=10, other=True, text_title = None, common_words='default'):
+    def create(src=None, top=10, other=False, text_title = None, common_words='default'):
         
         if src == None:
             raise Exception("Missing one argument: provide source text")
