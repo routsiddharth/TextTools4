@@ -189,24 +189,33 @@ class Tools:
         elif type(text) != str:
             raise Exception("Type error: text has to be type str")
             
-        ease = reading_ease(text)
+        words = text.replace("\n", " ")
+        words = words.split(" ")
+        bad_chars = ["", " "]
         
-        if ease >= 90:
-            return "5th Grade"
-        elif ease >= 80:
-            return "6th Grade"
-        elif ease >= 70:
-            return "7th Grade"
-        elif ease >= 60:
-            return "8th to 9th Grade"
-        elif ease >= 50:
-            return "10th to 12th Grade"
-        elif ease >= 30:
-            return "College"
-        elif ease >= 10:
-            return "College Graduate"
-        else:
-            return "Professional"
+        for x in words:
+            if x in bad_chars:
+                words.remove(x)
+        
+        syllables = 0
+        
+        for word in words:
+            syllables += Tools.syllables(word)
+        
+        word_len = syllables/len(words)
+        
+        txt = text.splitlines()
+        txt = ".".join(txt)
+        
+        sentences = re.split(r'(?<!\w\.\w.)(?<![A-Z][a-z]\.)(?<=\.|\?)\s', txt)
+        
+        count = len(sentences)
+        
+        sent_len = len(words)/count
+        
+        grade_level = round((0.39*sent_len) + (11.8*word_len) - 15.59, 1)
+        
+        return grade_level
     
     def reading_ease(text=None):
         
